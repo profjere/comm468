@@ -1,0 +1,42 @@
+#container{
+ margin:0 auto;
+    width:95%;
+     min-width: 00px;
+    
+}
+
+header{
+    width:100%;
+    background-color:red;
+    height:60px;
+    float:left;
+}
+
+header h1{
+ font-size:110%;   
+}
+
+section{
+ width:65%;
+   
+    margin-right:1%;
+    background-color:blue;
+    height:80px;
+    float:left;
+    
+}
+
+article{
+    width:34%;
+    background-color:green;
+        height:80px;
+    float:left;
+    
+}
+
+footer{
+    width:100%;
+    background-color: magenta;
+    height:20px;
+    float:left;
+}
