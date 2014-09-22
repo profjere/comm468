@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Slicknav Example</title>
+
+<script src="slicknavjs/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="slicknav.css" />
+<script src="slicknavjs/jquery.slicknav.min.js"></script>
+  
+ 
+
+<style>
+    
+  .slicknav_menu,#mobilemenu {
+	  display:none;
+  }
+
+@media screen and (max-width: 450px) {
+	/* #menu is the original menu */
+	#menu {
+		display:none;
+	}
+	
+  .slicknav_menu {
+		display:block;
+	    }
+}
+
+</style> 
+
+    <script>
+	$(function(){
+		$('#mobilemenu').slicknav({
+            easingOpen:'linear',
+            easingClose:'swing',
+            duration:500
+        });
+	});
+</script> 
+
+</head>
+<body>
+
+<nav>
+<ul id="mobilemenu">
+	<li><a href="#">item 1</a></li>
+	<li><a href="#">item 2</a></li>
+	<ul>
+    <li><a href="#">item 2a</a></li>
+	<li><a href="#">item 2b</a></li>
+    </ul>
+    <li><a href="#">item 3</a></li>
+	<li><a href="#">item 4</a></li>
+</ul>
+    
+<ul id="menu">
+	<li><a href="#">item 1</a></li>
+	<li><a href="#">item 2</a></li>
+	<li><a href="#">item 3</a></li>
+	<li><a href="#">item 4</a></li>
+</ul>
+</nav>
+
+    </body>
+    </html>
