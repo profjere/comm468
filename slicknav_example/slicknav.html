@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Slicknav Example</title>
+<title>Slicknav</title>
 
 <script src="slicknavjs/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet" href="slicknav.css" />
@@ -11,9 +11,9 @@
 
 <style>
     
-  .slicknav_menu,#mobilemenu {
-	  display:none;
-  }
+    .slicknav_menu,#mobilemenu {
+	display:none;
+}
 
 @media screen and (max-width: 450px) {
 	/* #menu is the original menu */
@@ -21,26 +21,24 @@
 		display:none;
 	}
 	
-  .slicknav_menu {
+    .slicknav_menu {
 		display:block;
-	    }
+	}
 }
 
 </style> 
-
     <script>
 	$(function(){
 		$('#mobilemenu').slicknav({
             easingOpen:'linear',
+            duration:500,
             easingClose:'swing',
-            duration:500
+            
         });
 	});
 </script> 
-
 </head>
 <body>
-
 <nav>
 <ul id="mobilemenu">
 	<li><a href="#">item 1</a></li>
@@ -60,6 +58,8 @@
 	<li><a href="#">item 4</a></li>
 </ul>
 </nav>
-
+    
+    
+    
     </body>
     </html>
