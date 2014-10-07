@@ -1,0 +1,30 @@
+<html>
+<head>
+
+<script src="guessing_game.js"></script>
+ <style>
+	#answerDiv{
+		width:200px;
+		height:200px;
+		float:left;
+	}
+	
+	</style>
+	
+	
+</head>
+	<body>
+	<div id="guessDiv">
+		<form name="guessingGame" onSubmit="checkNumber(theAnswer);">
+		Guess Number<input type="text" id="aNumber"><br>
+  		<a href="#" onclick="checkNumber();">Submit Answer</a>	
+		</form>
+		</div>
+		
+		<div id="answerDiv"></div>
+		
+	
+	
+	
+	</body>	
+	</html>
