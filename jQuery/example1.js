@@ -66,8 +66,6 @@ $(document).mousemove(function(e) {
 	$('body').css('background','#fff');
 	};
 	
-	if (window.x<100){
-	$('body').css('background','red');
-};
+	
 });
 });
