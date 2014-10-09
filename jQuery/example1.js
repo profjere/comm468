@@ -14,17 +14,17 @@ $(function(){
 	});
 	
 	$('.fontsizeplus').bind('click',function(event){
-		var aCurrentSize=$('p').css('font-size');
+		var aCurrentSize=$('p.latin').css('font-size');
 		currentSize=parseInt(aCurrentSize);
 		currentSize=currentSize+1;
-		$('p').css('font-size',currentSize);
+		$('p.latin').css('font-size',currentSize);
 	});
 	
 	$('.fontsizeminus').bind('click',function(event){	
-		var aCurrentSize=$('p').css('font-size');
+		var aCurrentSize=$('p.latin').css('font-size');
 		currentSize=parseInt(aCurrentSize);
 		currentSize=currentSize-1;
-		$('p').css('font-size',currentSize);
+		$('p.latin').css('font-size',currentSize);
 	});
 		
 						
@@ -64,8 +64,11 @@ $(document).mousemove(function(e) {
 }
 	else {
 	$('body').css('background','#fff');
-	};
-	
-	
+	};	
+});
+    
+    $("#replace").bind('click',function(event){
+	$('p.latin').html('<h3>Aha, this text is much better, although it is repetitive. Aha, this text is much better, although it is repetitive. Aha, this text is much better, although it is repetitive. Aha, this text is much better, although it is repetitive.</h3>') ;
+    
 });
 });
