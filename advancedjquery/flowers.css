@@ -1,0 +1,62 @@
+body,div,ul,ol,li,h1,h2,h3,h4,p{
+	font-size:100%;font-weight: normal}
+
+ul#links{
+	list-style-type:none;
+	position: relative;
+}
+
+ul#links li{
+	float:left;
+	width:125px;
+	text-align: center;
+	position: relative;
+	margin: 2px 3px;
+	padding:4px;
+}
+
+ul#links li a.link-active{
+	color:red;
+}
+
+ul#links li a,ul#links li a.visited{
+	
+	background:#ccc;
+	padding:15x 5px 10px 0;
+	display:block;
+	text-decoration: none;
+	font: bold 18px "Helvetica Neue",Arial;
+	color:#fff;
+}
+
+#content_container{
+	border: 1px solid #333;
+	background: #fff;
+	width:60%;
+}
+
+.content{
+	display:none;
+	float:left;
+	border:2px solid #000;
+	padding:10px 5px 0 5px;
+	width:290px;
+	height:290px;
+	margin: 0 5px 5px 0;
+	
+}
+#pic1{
+	background-image: url('flowerimages/flower1.jpg');
+}
+
+#pic2{
+	background-image: url('flowerimages/flower2.jpg');
+}
+#pic3{
+	background-image: url('flowerimages/flower3.jpg');
+}
+#pic4{
+	background-image: url('flowerimages/flower4.jpg');
+}
+	
+	
