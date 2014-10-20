@@ -1,0 +1,44 @@
+body,div,ul,ol,li,h1,h2,h3,h4,p{
+	font-size:100%;font-weight: normal}
+
+ul#tabs{
+	list-style-type:none;
+	position: relative;
+}
+
+ul#tabs li{
+	float:left;
+	width:125px;
+	text-align: center;
+	position: relative;
+	margin: 2px 3px;
+	padding:4px;
+}
+
+ul#tabs li a.tab-active{
+	color:red;
+}
+
+ul#tabs li a,ul#tabs li a.visited{
+	
+	background:#ccc;
+	padding:15x 5px 10px 0;
+	display:block;
+	text-decoration: none;
+	font: bold 18px "Helvetica Neue",Arial;
+	color:#fff;
+}
+
+#content_container{
+	border: 1px solid #333;
+	background: #fff;
+	width:55%;
+}
+
+.content{
+	display:none;
+	float:left;
+	
+}
+	
+	
