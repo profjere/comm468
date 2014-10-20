@@ -1,0 +1,85 @@
+body,div,ul,ol,li,h1,h2,h3,h4,p{
+	font-size:100%;font-weight: normal}
+
+.container{
+	width:950px;
+	margin:10px auto;
+	font: 14px, "Helvetica Neue", Arial,Helvetica,Geneva,sans-serif;
+	border:1px solid #333;
+}
+
+p{
+	margin:10px;
+}
+
+ul#navigation{
+	list-style-type: none;
+	background-color: #ccc;
+	height:63px;
+	font-size:24px;
+}
+
+ul#navigation li{
+	float:left;
+	width:175px;
+	text-align: center;
+	position: relative;
+	height: 63px;
+	padding: 20px 5px 10px 5px;
+}
+
+ul#navigation li a{
+	color#fff;
+	text-decoration: none;
+	display: block;
+}
+
+ul#navigation li a.active,ul#navigation li a.visited{
+	color:#fff;
+}
+
+ul#navigation li ul.subnav{
+	background-color:#eee;
+	width:125px;
+	clear: both;
+	display: none;
+	position: absolute;
+	text-indent: -100px;
+	top:63px;
+	-moz-border-radius-bottomleft:8px;
+	-moz-border-radius-bottomright:8px;
+	-webkit-border-bottom-left-radius:8px;
+	-webkit-border-bottom-right-radius:8px;
+	
+	border-left:2px solid #998;
+	border-right:2px solid #998;
+	border-bottom:2px solid #998;
+}
+
+ul#navigation li ul.subnav li{
+	clear:both;
+	height:40px;
+	padding;0;
+	text-align: center;
+	margin:0px;
+	list-style-type: none;
+}
+
+ul#navigation li ul.subnav li a{
+	background:none;
+	font-size:24px;
+	color:#333;
+	text-decoration: none;
+	padding:10px 0;
+	border:none;
+}
+
+ul#navigation li ul.subnav li a:hover{
+	color:red;
+	border:none;
+}
+
+
+	
+	
+	
