@@ -1,0 +1,25 @@
+div{
+	border-bottom:1px solid #efefef;
+	margin:10px;
+	padding-bottom:10px;
+	width:600px;
+}
+
+.title{
+	float:left;
+	width:50px;
+	text-align:left;
+	padding-right:10px;
+}
+
+.radio-buttons label{
+	float:none;
+}
+.submit{
+	text-align:right;
+}
+
+.error,.notice, .success{
+	padding-left:.4em;
+	color:red;
+}
