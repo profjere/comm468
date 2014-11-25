@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>PHP test</title>
+</head>
+
+<body>
+
+<?php
+
+
+
+try
+//database connection
+{$pdo=new PDO('mysql:host=localhost;dbname=test3','test3','test3');
+ $success='Database Connected';
+ echo $success;
+}
+	
+catch(PDOException $e)
+	{
+		$output='Unable to connect.';
+		echo $output;
+		exit();
+	}
+//use a particular search
+if (isset($_POST['genreChoice'])) {
+$genre = $_POST['genreChoice'];
+	try
+	{$sql = "SELECT * FROM Movies JOIN Genres on Movies.GenreID=Genres.GenreID where Genres.Genre='$genre'";
+	 $result = $pdo->query($sql);
+
+	 
+	}
+	catch (PDOExeption $e)
+	{
+		$error='Error fetching table'.$e->getMessage();
+		echo  $error;
+		exit();
+	}
+//put results into an array
+	while ($row=$result->fetch())
+	{
+		$theFilms[]=array('Title'=>$row['title'],'Rating'=>$row['rating'],'Genre'=>$row['genre']);
+	}
+
+echo '<p>';
+//print array, one line at a time
+	foreach($theFilms as $films){
+		echo($films['Title']);
+		echo ' ';
+		
+		echo($films['Rating']);
+		
+		echo ' ';
+		
+		echo($films['Genre']);
+		echo '<p>';
+	}
+}
+
+	?>
+
+	
+<form action="movies_example_final.php" method="post" id="genre">
+<div>
+	
+	
+		
+	<?php
+
+//use a particular search
+	try
+	{$sql = "SELECT genre FROM `Genres`";
+	 $result = $pdo->query($sql);
+	 
+	}
+	catch (PDOExeption $e)
+	{
+		$error='Error fetching table'.$e->getMessage();
+		echo  $error;
+		exit();
+	}
+
+//put results into an array
+	$count=0;
+	while ($row=$result->fetch())
+	{
+		$theGenres[]=array('Genre'=>$row['genre']);
+	}
+
+echo '<p>';
+echo '<label for="genreChoice" class="title">Genre:</label>';
+echo '<select  name="genreChoice">';
+//print array, one line at a time
+	foreach($theGenres as $eachOfTheGenres){
+		if ($eachOfTheGenres['Genre']==$genre){
+			$eachOption="<option value=".$eachOfTheGenres['Genre']." SELECTED>".$eachOfTheGenres['Genre']."</option>";
+		} else {
+			$eachOption="<option value=".$eachOfTheGenres['Genre'].">".$eachOfTheGenres['Genre']."</option>";
+		};
+		echo($eachOption);
+	}
+
+
+	?>
+</select>
+	<br/>
+	<div>
+	<input type="submit" value="Select Genre" id="submit" />
+	
+</div>
+	</div>	
+	
+</form>
+	
+
+</body>
+</html>
